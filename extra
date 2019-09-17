@@ -1,0 +1,57 @@
+/*******************
+    Package.json
+*******************/
+First file of contact and help to manage Packages
+JSON=> JavaScript object notation
+
+{
+    name:"a",
+    class:"b"
+}
+
+/*******************
+Step to create
+*******************/
+Step1: Navigate to folder using cmd/ternimal
+Step2: npm init
+Step3: Answer all questions
+Step4: type 'yes'
+
+
+/*******************
+    Package
+*******************/
+Local Package=> all major packages
+Global Package=> only those require to create, test build run
+
+
+/*****************************
+Step to install local package
+*****************************/
+Step1: Navigate to folder using cmd/ternimal
+Step2: npm install/i zone.js
+
+
+/*****************************
+Step to install global package
+*****************************/
+Win
+> Open cmd as admin
+> npm install -g @aaakashdeveloper/create-node-app
+
+Mac /linux
+> open terminal
+> sudo npm install -g @aaakashdeveloper/create-node-app
+
+/*****************************
+Step to setup react
+*****************************/
+-------One time-------------
+Step1: Install global package
+Step2: npm install -g create-react-app
+--------------------------
+Step3: Navigate to folder using cmd/ternimal
+Step4: create-react-app firstapp
+Step5: cd firstapp
+Step6: npm start
+
