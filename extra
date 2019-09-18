@@ -55,3 +55,31 @@ Step4: create-react-app firstapp
 Step5: cd firstapp
 Step6: npm start
 
+/************************
+    Component
+***************************/
+ClassBase
+Functional
+
+//let var const
+//es5
+function add(a,b){
+    return a+b
+}
+
+var add = function() {
+    return a+b
+}
+
+
+//es6
+const add = (a,b) => {
+    return a+b
+}
+
+
+ecmaScript
+
+JSX
+
+//Webpack
