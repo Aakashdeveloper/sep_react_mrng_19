@@ -83,3 +83,33 @@ ecmaScript
 JSX
 
 //Webpack
+
+
+
+function language(name,country){
+    this.name = name;
+    this.country = country
+}
+
+var hindi = new language('Hinid','India')
+
+class language{
+    constructor(name,country){
+        this.name = name;
+        this.country = country
+    }
+}
+
+var hindi = new language('Hinid','India')
+
+
+function                  Class
+light in weight           Bit heavy
+it cannot handle state    It can handle state
+Presntational Comp        Logical Component
+
+State & Props
+
+A                Props       B
+state=movies     ===>        State=Actors
+

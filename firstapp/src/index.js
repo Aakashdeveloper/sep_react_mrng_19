@@ -1,16 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import Header from './Header';
+import Footer from './Footer';
 
 //return
 const Main = () => {
     return(
-        <div>
+        <React.Fragment>
+            <Header/>
             <h1>This is My React app</h1>
             <img src="https://image.ibb.co/f0hhZc/bp.jpg"/>
             <div>
                 <h2>My Component</h2>
             </div>
-        </div>
+            <Footer/>
+        </React.Fragment>
     )
 }
 
