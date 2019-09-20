@@ -77,6 +77,7 @@ const add = (a,b) => {
     return a+b
 }
 
+(a,b) => {return a+b}
 
 ecmaScript
 
@@ -113,3 +114,7 @@ State & Props
 A                Props       B
 state=movies     ===>        State=Actors
 
+
+
+https://www.w3schools.com/jsref/jsref_map.asp
+https://www.w3schools.com/jsref/jsref_filter.asp

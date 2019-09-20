@@ -1,31 +1,38 @@
 import React,{Component} from 'react';
+import './Header.css';
 
 class Header extends Component{
+
+    constructor(){
+        super()
+        console.log(">>>>>>constructor")
+        this.state={
+            title:'My React App'
+        }
+    }
+
+    inputChange(event) {
+        console.log(event.target.value)
+    }                         
+
     render(){
+        console.log(">>>>>>render")
         return(
             <header>
+                <div className="logo"
+                onClick={()=>{console.log('Clicked')}}
+                >
+                    {this.state.title}
+                </div>
                 <center>
-                    <h2>Nareshit</h2>
+                    <input onChange={this.inputChange}/>
                 </center>
                 <hr/>
             </header> 
         )
     }
+
+    
 }
 
 export default Header;
-
-
-/*
-const Header = () => {
-    return(
-            <header>
-                <center>
-                    <h2>Nareshit</h2>
-                </center>
-                <hr/>
-            </header>
-            
-    )
-}
-*/
