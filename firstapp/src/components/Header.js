@@ -7,12 +7,15 @@ class Header extends Component{
         super()
         console.log(">>>>>>constructor")
         this.state={
-            title:'My React App'
+            title:'My React App',
+            userinput:'User Text here'
+
         }
     }
 
     inputChange(event) {
         console.log(event.target.value)
+        this.setState({userinput:event.target.value ?                              event.target.value : 'User Text here'})
     }                         
 
     render(){
@@ -25,7 +28,8 @@ class Header extends Component{
                     {this.state.title}
                 </div>
                 <center>
-                    <input onChange={this.inputChange}/>
+                    <input onChange={this.inputChange.bind(this)}/>
+                    <h3>{this.state.userinput}</h3>
                 </center>
                 <hr/>
             </header> 
