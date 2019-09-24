@@ -15,7 +15,8 @@ class Header extends Component{
 
     inputChange(event) {
         console.log(event.target.value)
-        this.setState({userinput:event.target.value ?                              event.target.value : 'User Text here'})
+        this.setState({userinput:event.target.value ?event.target.value : 'User Text here'})
+        this.props.usertext(event.target.value)
     }                         
 
     render(){

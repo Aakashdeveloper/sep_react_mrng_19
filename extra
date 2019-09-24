@@ -118,3 +118,50 @@ state=movies     ===>        State=Actors
 
 https://www.w3schools.com/jsref/jsref_map.asp
 https://www.w3schools.com/jsref/jsref_filter.asp
+
+
+var a = [4,6,8,10,12]
+a.map((uin) => { return uin*2})
+
+a.map(Math.sqrt)
+a
+
+var a = [34,56,42,17,12,24]
+
+function findage(age){
+    return age>18
+}
+
+var findage = (age) => { return age>18}
+
+var a = [34,56,42,17,12,24]
+a.filter((age) => { return age>18})
+
+var a = [0,1,2,3,4]
+a.map((val) => { return val*1})
+var a = [0,1,2,3,4]
+a.filter((val) => { return val*1})
+
+
+
+1 or greater  and true
+>0,false,null,undefiend
+
+
+var a = [1,2,3,4]
+undefined
+a.indexOf(3)
+2
+a.indexOf(1)
+0
+a.indexOf(5)
+-1
+a.indexOf(9)
+-1
+
+
+parent ==> child(props)
+child ==> Parent(CallBack)
+
+
+rotuing

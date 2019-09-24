@@ -11,15 +11,25 @@ class Main extends Component{
         super()
 
         this.state= {
-            news: JSON
+            news: JSON,
+            filtered: JSON
         }
     }
+
+    filterNews(keyword){
+        const output = this.state.news.filter((data) => {
+            return data.title.toLowerCase().indexOf(keyword.toLowerCase())>-1;
+        })
+
+        this.setState({filtered:output})
+    }
+   
 
     render(){
         return(
             <React.Fragment>
-                <Header/>
-                <NewsList newsdata={this.state.news}/>
+                <Header usertext={(uInput)=>{this.filterNews(uInput)}}/>
+                <NewsList newsdata={this.state.filtered}/>
                 <Footer/>
             </React.Fragment>
         )
