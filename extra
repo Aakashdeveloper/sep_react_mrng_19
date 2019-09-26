@@ -166,3 +166,7 @@ child ==> Parent(CallBack)
 
 rotuing
  npm install react-router-dom
+
+
+ npm i -g json-server
+ json-server --watch db.json --port 8900

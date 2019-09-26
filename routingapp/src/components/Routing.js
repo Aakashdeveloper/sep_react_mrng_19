@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link} from 'react-router-dom';
 import Home from './Home';
 import Profile from './profile';
 import Posts from './Post';
+import PostDetails from './postDetails'
 
 class Routing extends Component {
     render(){
@@ -33,8 +34,9 @@ class Routing extends Component {
                     </nav>
                     </header>
                     <Route exact path="/" component={Home}></Route>
-                    <Route  path="/posts" component={Posts}></Route>
+                    <Route exact path="/posts" component={Posts}></Route>
                     <Route  path="/profile" component={Profile}></Route>
+                    <Route path="/posts/:topic" component={PostDetails}></Route>
                 </div>
             </BrowserRouter>
         )
