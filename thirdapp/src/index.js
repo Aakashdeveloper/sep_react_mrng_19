@@ -10,6 +10,7 @@ const App = () => {
         <BrowserRouter>
             <div>
                 <Route exact path="/" component ={Home}></Route>
+                <Route exact path="/details/:id" component={Artist}></Route>
             </div>
         </BrowserRouter>
     )

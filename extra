@@ -170,3 +170,9 @@ rotuing
 
  npm i -g json-server
  json-server --watch db.json --port 8900
+
+
+
+ var a = 10
+ var b = "my age is "+a 
+ var c = `my age is ${a}`

@@ -19,12 +19,14 @@ class Home extends Component {
         fetch(url,{
             method:'GET'
         })
+        
         .then(response => response.json())
-        .then((data) => { 
+        .then((data,err) => { 
             this.setState({
                 artists:data
             })
         })
+        .catch()
     }
 
     render(){
