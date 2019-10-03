@@ -5,6 +5,7 @@ import Home from './Home';
 import Profile from './profile';
 import Posts from './Post';
 import PostDetails from './postDetails'
+import Lifecycle from './LifeCycle'
 
 class Routing extends Component {
     render(){
@@ -27,6 +28,7 @@ class Routing extends Component {
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/posts">Posts</Link></li>
                             <li><Link to="/profile">Profile</Link></li>
+                            <li><Link to="/lifecycle">LifeCycle</Link></li>
                         </ul>
                         
                         </div>
@@ -37,6 +39,7 @@ class Routing extends Component {
                     <Route exact path="/posts" component={Posts}></Route>
                     <Route  path="/profile" component={Profile}></Route>
                     <Route path="/posts/:topic" component={PostDetails}></Route>
+                    <Route path="/lifecycle" component={Lifecycle}></Route>
                 </div>
             </BrowserRouter>
         )
