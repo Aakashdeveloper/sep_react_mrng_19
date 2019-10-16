@@ -189,3 +189,10 @@ rotuing
 
 
  
+ var age = 10
+ var b = 'john'
+
+ 'my age is '+age
+ `my age is ${age}`
+
+ 
