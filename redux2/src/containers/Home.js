@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { latestNews,articleNews} from '../actions';
-import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types'
 
 
 import LatestNews from '../components/Home/LatestNews';
@@ -11,8 +11,8 @@ import Gallery from '../components/Home/GalleryNews';
 class Home extends Component{
     
     componentDidMount(){
-        this.props.latestNews()
-        this.props.articleNews()
+        this.props.dispatch(latestNews())
+        this.props.dispatch(articleNews())
     }
 
     render(){
@@ -27,15 +27,16 @@ class Home extends Component{
 }
 
 function mapStateToProps(state){
-    // console.log(state)
     return{
         articles:state.articles,
         gal:state.gallery
     }
 }
 
-function mapDispatchToProps(dispatch){
-    return bindActionCreators({latestNews,articleNews},dispatch)
+Home.protoTypes={
+    dispatch: PropTypes.func
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Home);
+
+
+export default connect(mapStateToProps)(Home);
