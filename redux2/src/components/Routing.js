@@ -4,14 +4,16 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Home from '../containers/Home';
 import Header from './Header';
 import Footer from './Footer';
+import NewsDetails from '../containers/NewsDetails'
 
-class App extends Component {
+class Routing extends Component {
     render(){
         return(
             <BrowserRouter>
                 <div>
                     <Header></Header>
                     <Route exact path="/" component={Home}/>
+                    <Route exact path="/details/:id" component={NewsDetails}/>
                     <Footer></Footer>
                 </div>
             </BrowserRouter>
@@ -19,4 +21,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Routing;
