@@ -30,7 +30,7 @@ export function latestGallery(){
     }
 }
 
-export function selectedNews(){
+export function selectedNews(id){
     const output = fetch(`${url}/articles?id=${id}`, {method:'GET'})
     .then(response => response.json())
 
@@ -48,4 +48,22 @@ export function clearselectedNews(){
     }
 }
 
+
+export function handleLikes(array,id){
+    console.log(array,id)
+    const output = fetch(`${url}/articles/${id}`,{
+        method:'PATCH',
+        headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({likes:array})
+    })
+    .then(response => response.json())
+
+    return{
+        type:'HANDLE_LIKES',
+        payload: output
+    }
+}
 
