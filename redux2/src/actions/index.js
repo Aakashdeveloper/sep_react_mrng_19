@@ -67,3 +67,37 @@ export function handleLikes(array,id){
     }
 }
 
+
+export function PostData(title,body,category){
+    console.log(title,body,category)
+    var random = Math.floor(Math.random()*1000);
+    let data = {
+        id:random ,
+        title:title,
+        body: body,
+        category: category,
+        img: "7.jpg",
+        date: "21/21/1944",
+        author: "Meredith Cash",
+        views: 237,
+        likes: [
+        12,
+        9
+      ]
+    }
+    fetch(`${URL}/articles/`,{
+        method:'POST',
+        headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(data)
+    })
+    .then((response) => response.json())
+
+    return{
+        type:'POST_FORM',
+        payload:''
+    }
+
+}
